@@ -1,0 +1,16 @@
+erDiagram
+USERS ||--o{ CLIENTS : owns
+CLIENTS ||--|| PROJECTS : has
+
+
+FRAMEWORKS ||--o{ FRAMEWORK_PHASES : contains
+FRAMEWORK_PHASES ||--o{ FRAMEWORK_STEPS : contains
+FRAMEWORK_STEPS ||--o{ FRAMEWORK_ACTIONS : contains
+
+
+PROJECTS ||--o{ PROJECT_ACTIONS : has
+FRAMEWORK_ACTIONS ||--o{ PROJECT_ACTIONS : instantiates
+
+
+PROJECT_ACTIONS ||--o{ ACTION_OUTPUTS : produces
+PROJECT_ACTIONS ||--o{ ACTION_LOGS : logs
